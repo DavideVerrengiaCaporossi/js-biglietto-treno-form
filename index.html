@@ -4,25 +4,48 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Biglietteria</title>
 </head>
 <body>
+    <h1>Biglietteria</h1>
     <!--creiamo una form con due input e un button-->
-    <form>
+    <form id="ticketForm" action="#" >
         <div class="mb-3">
           <label for="km" >Chilometri</label>
-          <input type="text" class="form-control" id="km" placeholder="Inserire il numero di chilometri che si vogliono percorrere" >
+          <input type="number"  id="km" placeholder="Inserire il numero di chilometri che si vogliono percorrere" required >
         </div>
         <div class="mb-3">
             <label for="eta" >eta</label>
-            <input type="text" class="form-control" id="eta" placeholder="Inserire l'eta del passeggero" >
+            <input type="number"  id="eta" placeholder="Inserire l'eta del passeggero" >
         </div>
         
         <button type="submit" class="btn btn-primary">Calcola prezzo biglietto</button>
       </form>
+      <!--OUTPUT-->
+      <!--FACCIAMO USCIRE L OUTPUT SOLO QUANDO HO CLICCATO SUL TASTO CN IL CSS (OPACITA O DISPLAY BLOCK) PER NASCONDERE L ELEMENTE MA LA DO E LA TOLGO CON IL TOGGLER-->
+      <div class="hidden" id="output">
+      <h2>il tuo Biglietto</h2>
+
+      <table>
+        <thead>
+            <tr>
+                <th>Kilometri</th>
+                <th>Tariffa</th>
+                <th>Prezzo</th>
+             </tr>
+        </thead>
+        <tbody>
+            <tr>
+              <td id="kmInUscita"> </td>
+              <td id="offertaInUscita"> </td>
+              <td id="prezzoInUscita"> </td>
+            </tr>
+        </tbody>
 
 
-    
+    </table>
+</div>
 
     
 
